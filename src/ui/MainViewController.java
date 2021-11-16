@@ -20,6 +20,13 @@ import model.Variable;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * Clase controladora, se encarga de gestionar todas las acciones que se realizan en la interfaz
+ * grafica, es decir, ayudan a conectan el front con los metodos del back.
+ * @author Bryan Guapacha --> GitHub Account: BryangGF0822
+ * @author Danna Garcia --> Github Account: Dannasofiagarcia
+ *
+ */
 public class MainViewController {
 
     private int layoutXtf1;
@@ -74,6 +81,11 @@ public class MainViewController {
     @FXML
     private Pane tablaCYKPane;
 
+    /**
+     * Permite ingresar las cadenas al hacer click en el boton. Toma el contenido del
+     * cuadro de texto.
+     * @param event
+     */
     @FXML
     void ingresarCadenaBtn(ActionEvent event) {
         if(cadenawTF.getText().equals("")) {
@@ -104,6 +116,11 @@ public class MainViewController {
         tablaCYKPane.setVisible(true);
     }
 
+    /**
+     * Al hacer click en el boton, me permite reiniciar la aplicacion en caso de haber
+     * cometido un error o simplemente querer ingresar nuevos datos.
+     * @param event
+     */
     @FXML
     void reiniciar(ActionEvent event) {
         initialize();
@@ -120,6 +137,9 @@ public class MainViewController {
     }
 
 
+    /**
+     * Permite inicializar el programa.
+     */
     @FXML
     void initialize(){
         gramatica = new ArrayList<>();
@@ -127,6 +147,11 @@ public class MainViewController {
     }
 
 
+    /**
+     * Al hacer click en el boton, el programa toma el contenido del cuandro de texto
+     * en el cual debe estar indicado el numero de variables a definir.
+     * @param event
+     */
     @FXML
     void definirCantidadVariables(ActionEvent event) {
         layoutXtf1 = 159;
@@ -193,6 +218,11 @@ public class MainViewController {
         }
     }
 
+    /**
+     * Permite definir la gramatica a partir de la cadena que se encuentre en el
+     * cuandro de texto en el que debe digitar el usuario.
+     * @param event
+     */
     @FXML
     void definirGramatica(ActionEvent event) {
         boolean textFieldVacios = false;

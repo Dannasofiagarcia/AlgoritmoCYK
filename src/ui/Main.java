@@ -40,7 +40,14 @@ public class Main{
      ***/
 
 
-
+/**
+ * 
+ * Clase principal del modelo que se encarga de correr todo el programa tanto en el back como en el front.
+ * La interfaz grafica esta diseñada con javaFX por medio de SceneBuilder.
+ * @author Bryan Guapacha --> GitHub Account: BryangGF0822
+ * @author Danna Garcia --> Github Account: Dannasofiagarcia
+ *
+ */
 public class Main extends Application {
 
     private MainViewController mainController;

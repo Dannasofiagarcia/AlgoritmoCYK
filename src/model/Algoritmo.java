@@ -2,18 +2,33 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * Clase Algoritmo que genera la estructura base para los CYK.
+ * @author Bryan Guapacha --> GitHub Account: BryangGF0822
+ * @author Danna Garcia --> Github Account: Dannasofiagarcia
+ *
+ */
 public class Algoritmo {
 
     private ArrayList<Variable> gramatica;
     private String cadena;
     private String[][] resultado;
 
+    /**
+     * Metodo contructor
+     * @param gramatica: ArrayList de variables que se almacenan.
+     * @param cadena: Cadena alfabetica que entra como parametro.
+     */
     public Algoritmo(ArrayList<Variable> gramatica, String cadena) {
         this.gramatica = gramatica;
         this.cadena = cadena;
         resultado = new String[gramatica.size()][gramatica.size()];
     }
 
+    /**
+     * Metodo de tipo Boolean que almacena todo el proceso del algoritmo CYK.
+     * @return de tipo Boolean (false/true)
+     */
     public boolean algoritmoCYK(){
         String subcadena = "";
         boolean agregado = false;
@@ -120,6 +135,12 @@ public class Algoritmo {
         }
 
 
+    /**
+     * Metodo que retorna una variable producida por una gramatica y una cadena.
+     * @param gramaticas: ArrayList de gramaticas de tipo Variable.
+     * @param x: Cadena que entra como parametro.
+     * @return Retorna un objeto de tipo variable.
+     */
     public Variable producidaPor(ArrayList<Variable> gramaticas, String x){
         boolean flag = false;
         Variable buscada = null;
@@ -131,7 +152,13 @@ public class Algoritmo {
         }
         return buscada;
     }
-
+    /**
+     * Metodo que permite obtener las posiciones en una cadena.
+     * @param cadena: Arreglo que contiene la cadena a analizar.
+     * @param inicio: Posicion inicial de la cadena, el primer caracter.
+     * @param longitud: Tamaño o longitud de la cadena.
+     * @return
+     */
     public String obtenerPosicionesCadena(String[] cadena, int inicio, int longitud){
         String resultado = "";
         int longitudRecorrida = 0;
@@ -143,7 +170,11 @@ public class Algoritmo {
         }
         return resultado;
     }
-
+    
+    /**
+     * Metodo que me permite imprimir la matriz.
+     * Este metodo es de tipo Void y no recibe parametros.
+     */
     public void imprimirMatriz() {
         System.out.println();
         for (int i = 0; i < resultado.length; i++) {
@@ -155,10 +186,16 @@ public class Algoritmo {
     }
 
 
+    /**
+     * Metodo que me permite agregar una variable a la gramatica.
+     * @param variable: Objeto de tipo Variable que se desea agregar a la lista.
+     */
     public void agregarVariable(Variable variable){
         gramatica.add(variable);
     }
 
+//------------- Metodos Getters and Setters -------------//
+    
     public ArrayList<Variable> getGramatica() {
         return gramatica;
     }
@@ -171,3 +208,5 @@ public class Algoritmo {
         return resultado;
     }
 }
+
+//------------------------------------------------------//
