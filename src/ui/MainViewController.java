@@ -81,12 +81,13 @@ public class MainViewController {
     @FXML
     private Pane tablaCYKPane;
 
-    @FXML
+   
     /**
      * Permite ingresar las cadenas al hacer click en el boton. Toma el contenido del
      * cuadro de texto.
      * @param event
      */
+    @FXML
     void ingresarCadenaBtn(ActionEvent event) {
         if(cadenawTF.getText().equals("")) {
             Toolkit.getDefaultToolkit().beep();
@@ -115,13 +116,13 @@ public class MainViewController {
         }
         tablaCYKPane.setVisible(true);
     }
-    
-    @FXML
+   
     /**
      * Al hacer click en el boton, me permite reiniciar la aplicacion en caso de haber
      * cometido un error o simplemente querer ingresar nuevos datos.
      * @param event
      */
+    @FXML
     void reiniciar(ActionEvent event) {
         initialize();
         scrollPane.setVisible(true);
@@ -136,21 +137,23 @@ public class MainViewController {
         definirGramaticaBtn.setDisable(true);
     }
 
-    @FXML
+    
     /**
      * Permite inicializar el programa.
      */
+    @FXML
     void initialize(){
         gramatica = new ArrayList<>();
 
     }
 
-    @FXML
+ 
     /**
      * Al hacer click en el boton, el programa toma el contenido del cuandro de texto
      * en el cual debe estar indicado el numero de variables a definir.
      * @param event
      */
+    @FXML
     void definirCantidadVariables(ActionEvent event) {
         layoutXtf1 = 159;
         layoutXtf2 = 318;
@@ -216,12 +219,13 @@ public class MainViewController {
         }
     }
 
-    @FXML
+    
     /**
      * Permite definir la gramatica a partir de la cadena que se encuentre en el
      * cuandro de texto en el que debe digitar el usuario.
      * @param event
      */
+    @FXML
     void definirGramatica(ActionEvent event) {
         boolean textFieldVacios = false;
         boolean encontrado = false;
