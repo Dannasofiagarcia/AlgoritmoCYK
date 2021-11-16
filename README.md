@@ -1,7 +1,7 @@
 # Algoritmo - CYK
 
 ## Description.
-This program implement a program that from a context-independent grammar G and a string w establishes whether the grammar generates such a string, i.e. w ∈ L(G).
+This program implement a program that from a context-independent grammar G and a string w establishes whether the grammar generates such a string, w ∈ L(G).
 
 ## Development team.
   1. Danna Sofia Garcia. [Profile on Github](https://github.com/Dannasofiagarcia)
